@@ -1,0 +1,118 @@
+<!doctype html>
+<head>
+<title>ManiMadhuriAlbum</title>
+
+<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+<link rel="icon" type="image/png" href="pages/icon.png"/>
+</head>
+<body>
+<br>
+<center><a href="https://manikantapeta.github.io/album2/samples/double-page/index.html" style="color:black">Click here for Album Part-2</a></center>
+<br>
+
+<center><h2 style="color:orange">Album Part-1</h2></center>
+<br>
+<div class="flipbook-viewport">
+
+	<div class="container">
+
+		<div class="flipbook">
+			<div class="page" style="background-image:url(pages/0.jpg)"> </div>
+			<div class="page" style="background-image:url(pages/blank.png)"></div>
+			<div class="page" style="background-image:url(pages/1.jpg)"></div>
+			<div class="double" style="background-image:url(pages/2.jpg)"></div>
+			<div class="double" style="background-image:url(pages/66.jpg)"></div>
+			<div class="double" style="background-image:url(pages/3.jpg)"></div>
+			<div class="double" style="background-image:url(pages/52.jpg)"></div>
+			<div class="double" style="background-image:url(pages/4.jpg)"></div>
+			<div class="double" style="background-image:url(pages/59.jpg)"></div>
+			<div class="double" style="background-image:url(pages/5.jpg)"></div>
+			<div class="double" style="background-image:url(pages/6.jpg)"></div>
+			<div class="double" style="background-image:url(pages/53.jpg)"></div>
+			<div class="double" style="background-image:url(pages/7.jpg)"></div>
+			<div class="double" style="background-image:url(pages/aa.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ab.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ac.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ad.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ae.jpg)"></div>
+			<div class="double" style="background-image:url(pages/af.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ag.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ah.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ai.jpg)"></div>
+			<div class="double" style="background-image:url(pages/aj.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ak.jpg)"></div>
+			<div class="double" style="background-image:url(pages/al.jpg)"></div>
+			<div class="double" style="background-image:url(pages/am.jpg)"></div>
+			<div class="double" style="background-image:url(pages/an.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ao.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ap.jpg)"></div>
+			<div class="double" style="background-image:url(pages/aq.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ar.jpg)"></div>
+			<div class="double" style="background-image:url(pages/as.jpg)"></div>
+			<div class="double" style="background-image:url(pages/at.jpg)"></div>
+			<div class="double" style="background-image:url(pages/au.jpg)"></div>
+			<div class="double" style="background-image:url(pages/av.jpg)"></div>
+			<div class="double" style="background-image:url(pages/aw.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ax.jpg)"></div>
+			<div class="double" style="background-image:url(pages/ay.jpg)"></div>
+			<div class="double" style="background-image:url(pages/az.jpg)"></div>
+			<div class="double" style="background-image:url(pages/az1.jpg)"></div>
+			<div class="double" style="background-image:url(pages/az2.jpg)"></div>
+
+			<div class="page" style="background-image:url(pages/az3.jpg)"></div>
+			<div class="page" style="background-image:url(pages/blank.png)"></div>
+			<div class="page" style="background-image:url(pages/12.jpg)"></div>
+
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	var flipbook = $('.flipbook');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+
+	$('.flipbook .double').scissor();
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../../lib/turn.min.js'],
+	nope: ['../../lib/turn.html4.min.js'],
+	both: ['../../lib/scissor.min.js', 'css/double-page.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
